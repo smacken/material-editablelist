@@ -1,0 +1,9 @@
+{
+  "name": "material-editablelist",
+  "version": "0.1.0",
+  "description": "React materialui editable list",
+  "main": "EditableList.js",
+  "author": "smacken",
+  "license": "MIT",
+  "private": false
+}
