@@ -5,5 +5,20 @@
   "main": "EditableList.js",
   "author": "smacken",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "lint": "eslint ./src/",
+    "lint:fix": "eslint --fix ./src/",
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.9.14",
+    "@material-ui/icons": "^4.9.1",
+    "react": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.35",
+    "jest": "^26.0.1"
+  }
 }
