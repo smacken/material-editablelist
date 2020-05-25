@@ -119,7 +119,7 @@ export const EditableList: React.FC<EditableListProps> = ({ editList }: Editable
   };
   return (
     <React.Fragment>
-      <List dense>
+      <List dense data-testid="editablelist">
         {selection.items.map((value: { text: string }, index: number) => {
           return (
             <ListItem

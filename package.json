@@ -10,7 +10,8 @@
     "lint": "eslint ./src/ --quiet --fix",
     "lint:fix": "eslint --fix ./src/",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.14",
@@ -19,6 +20,8 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "@testing-library/react": "^10.0.4",
+    "@types/jest": "^25.2.3",
     "@types/react": "^16.9.35",
     "@typescript-eslint/eslint-plugin": "^3.0.0",
     "@typescript-eslint/parser": "^3.0.0",
@@ -28,6 +31,25 @@
     "eslint-plugin-react": "^7.20.0",
     "jest": "^26.0.1",
     "prettier": "^2.0.5",
+    "ts-jest": "^26.0.0",
     "typescript": "^3.9.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/test"
+    ],
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$",
+    "roots": [
+      "src",
+      "test"
+    ]
   }
 }
